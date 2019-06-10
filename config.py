@@ -57,8 +57,8 @@ TABLE     = "you1"          # 读取表
 COLUMN    = "mobile"        # 读取字段
 
 # ----- 3.3 批量读取页面设置
-STARTPAGE = 401             # 开始页面
-ENDPAGE   = 600             # 结束页面
+STARTPAGE = 601             # 开始页面
+ENDPAGE   = 800             # 结束页面
 PAGESIZE  = 200000           # 每页数量
 
 # ----- 3.4 保存结果表名
