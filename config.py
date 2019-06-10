@@ -7,11 +7,11 @@
 """ 1. 请求设置 """
 
 # ----- 1.1 请求地址
-URL = "https://mrgu.toutoujinrong.com/UserWeb/user/login.do"
+URL = "https://login.api.guxiansheng.cn/index.php?c=verification&a=send"
 
 # ----- 1.2 请求头 注意不与上下引号同行
 HEADERS = """
-Host: mrgu.toutoujinrong.com
+Host: login.api.guxiansheng.cn
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 35
 Connection: keep-alive
@@ -23,7 +23,7 @@ Accept-Encoding: br, gzip, deflate
 """
 
 # ----- 1.3 POST 请求设置
-FORM = "deviceID=I06E6A32188BA8881&mobile=1356085466%EF%BC%89&password=hughyuggh"       # 请求数据
+FORM = "mobile=15358936986&pattern=0&type=2"       # 请求数据
 KEY_FIELD = "mobile"        # 请求体中需批量处理的字段，如：mobile、phone等
 
 # ----- 1.4 GET 请求设置 ------
@@ -34,12 +34,11 @@ QUERY_FILED = "phone"      # 请求URL中的批量处理字段，如：https://x
 
 """ 2. 响应设置 """
 
-# ----- 2.1 视为成功的json格式的键值对，一个或多个，为结果的子集，是判断的关键部分
-# 格式实例：{"code": 1, "message": "用户名或密码错误", }
-SUCEED_KEY_VALUE = {"code":1,"message":"ok","data":1}
+# ----- 2.1 视为成功的json数据，保存结果的判断条件
+SUCCEED_JSON = {'code': 1, 'message': 'ok', 'data': 1}
 
-# ----- 2.2 视为失败的json数据键值对
-IGNORE_KEY_VALUE = {"statusCode":-10101,"message":"账户不存在"}
+# ----- 2.2 视为失败的json数据
+IGNORE_JSON = {'code': -1, 'message': '该手机号还未注册'}
 
 """ """
 
@@ -57,9 +56,9 @@ TABLE     = "you1"          # 读取表
 COLUMN    = "mobile"        # 读取字段
 
 # ----- 3.3 批量读取页面设置
-STARTPAGE = 601             # 开始页面
-ENDPAGE   = 800             # 结束页面
-PAGESIZE  = 200000           # 每页数量
+STARTPAGE = 0            # 开始页面
+ENDPAGE   = 1            # 结束页面
+PAGESIZE  = 110000           # 每页数量
 
 # ----- 3.4 保存结果表名
 SAVE_TABLE = "xxx_registered"
