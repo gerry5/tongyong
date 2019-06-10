@@ -36,10 +36,10 @@ QUERY_FILED = "phone"      # 请求URL中的批量处理字段，如：https://x
 
 # ----- 2.1 视为成功的json格式的键值对，一个或多个，为结果的子集，是判断的关键部分
 # 格式实例：{"code": 1, "message": "用户名或密码错误", }
-SUCEED_KEY_VALUE = {"code": 1, }
+SUCEED_KEY_VALUE = {"code":1,"message":"ok","data":1}
 
 # ----- 2.2 视为失败的json数据键值对
-IGNORE_KEY_VALUE = {"code":-1}
+IGNORE_KEY_VALUE = {"code":-1,"message":"\u8be5\u624b\u673a\u53f7\u8fd8\u672a\u6ce8\u518c"}
 
 """ """
 
