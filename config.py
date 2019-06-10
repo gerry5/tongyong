@@ -57,9 +57,9 @@ TABLE     = "you1"          # 读取表
 COLUMN    = "mobile"        # 读取字段
 
 # ----- 3.3 批量读取页面设置
-STARTPAGE = 100             # 开始页面
-ENDPAGE   = 200             # 结束页面
-PAGESIZE  = 20000           # 每页数量
+STARTPAGE = 201             # 开始页面
+ENDPAGE   = 300             # 结束页面
+PAGESIZE  = 200000           # 每页数量
 
 # ----- 3.4 保存结果表名
 SAVE_TABLE = "xxx_registered"
@@ -68,7 +68,7 @@ SAVE_TABLE = "xxx_registered"
 
 """ 4. 其他设置 """
 # ----- 4.1 线程设置
-THREAD_NUM = 12
+THREAD_NUM = 20
 
 # ----- 4.2 打印设置
 OUT_PRINT = 0           # 1: 只显示成功结果  0: 显示所有结果
