@@ -7,11 +7,11 @@
 """ 1. 请求设置 """
 
 # ----- 1.1 请求地址
-URL = "https://login.api.guxiansheng.cn/index.php?c=verification&a=send"
+URL = "https://mrgu.toutoujinrong.com/UserWeb/user/login.do"
 
 # ----- 1.2 请求头 注意不与上下引号同行
 HEADERS = """
-Host: login.api.guxiansheng.cn
+Host: mrgu.toutoujinrong.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 35
 Connection: keep-alive
@@ -23,7 +23,7 @@ Accept-Encoding: br, gzip, deflate
 """
 
 # ----- 1.3 POST 请求设置
-FORM = "mobile=15358936986&pattern=0&type=2"       # 请求数据
+FORM = "deviceID=I06E6A32188BA8881&mobile=1356085466%EF%BC%89&password=hughyuggh"       # 请求数据
 KEY_FIELD = "mobile"        # 请求体中需批量处理的字段，如：mobile、phone等
 
 # ----- 1.4 GET 请求设置 ------
@@ -39,7 +39,7 @@ QUERY_FILED = "phone"      # 请求URL中的批量处理字段，如：https://x
 SUCEED_KEY_VALUE = {"code":1,"message":"ok","data":1}
 
 # ----- 2.2 视为失败的json数据键值对
-IGNORE_KEY_VALUE = {"code":-1,"message":"\u8be5\u624b\u673a\u53f7\u8fd8\u672a\u6ce8\u518c"}
+IGNORE_KEY_VALUE = {"statusCode":-10101,"message":"账户不存在"}
 
 """ """
 
